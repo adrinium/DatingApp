@@ -1,0 +1,18 @@
+<div class="containter mt-5">
+    <div style="text-align: center;" *ngIf="!registerMode">
+        <h1>Find your match</h1>
+        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi accusamus, eius vitae fuga sit soluta quae porro voluptate veniam aliquid eos esse, laborum numquam quaerat illum. Beatae suscipit molestias repellat.</p>
+        <div class="center">
+            <button class="btn btn-primary" (click)="registerToggle()">Register</button>
+            <button class="btn btn-info">Learn more</button>
+        </div>
+    </div>
+
+    <div class="container" *ngIf="registerMode">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+            </div>
+        </div>
+    </div>
+</div>
